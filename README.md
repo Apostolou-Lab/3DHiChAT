@@ -28,18 +28,31 @@ Training dataset (Train.txt) contains 10 columns.
 3DHiChAT.R can be used in R after installing "caret" and "randomForest" library. 
 
 R 4.0.4 (2021-02-15) and randomForest 4.6-14 were used to calculate spearman rank correlation for the training of Train.txt file.
+
 After running 3DHiChAT.R on the Train.txt test spearman correlation score for chr1: 
+
 #################################################
+
 R
+
 library(randomForest)
+
 load("3DHiChAT.Rdata")
+
 a<- read.csv('Train.txt', sep="\t", header=T)
+
 test_chr1$random<- predict(randomfor_chr1, test_chr1)
+
 spcor1<- cor(test_chr1$tpm,  test_chr1$random, method="spearman")
+
 spcor1 
+
 ##0.4746914
+
 #################################################
+
 #Testing in a new datasets should include all 20 models for each chromosome and all values should averaged.
+
 test_chr1$random<- predict(randomfor_chr1, test_chr1)
 
 test_chr2$random<- predict(randomfor_chr2, test_chr2)
