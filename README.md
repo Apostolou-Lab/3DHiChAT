@@ -24,4 +24,16 @@ Training dataset (Train.txt) contains 10 columns.
 1. First column contains a unique ID which can be a gene name or the coordinates of the promoter bin at different resolutions.
 2. Second columns contains the Chromosome number.
 3. All 8 features used for testing or training (3D & 1D) in any order.
-4. 
+
+3DHiChAT.R can be used in R after installing "caret" and "randomForest" library. 
+
+R 4.0.4 (2021-02-15) and randomForest 4.6-14 were used to calculate spearman rank correlation for the training of Train.txt file.
+After running 3DHiChAT.R on the Train.txt : 
+#################################################
+R
+library(randomForest)
+load("3DHiChAT.Rdata")
+a<- read.csv('Train.txt', sep="\t", header=T)
+
+
+
