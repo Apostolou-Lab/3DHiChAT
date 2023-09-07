@@ -51,7 +51,7 @@ spcor1
 
 #################################################
 
-#Testing in a new datasets should include all 20 models for each chromosome and all values should averaged.
+#Testing in a new datasets should include all 20 models for each chromosome and all values should be averaged.
 
 test_chr1$random<- predict(randomfor_chr1, test_chr1)
 
