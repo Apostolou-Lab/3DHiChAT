@@ -61,9 +61,10 @@ test_chrX$random<- predict(randomfor_chrX, test_chrX)
 
 ######################################################################
 
-For calculating perturbation score for any enhancer-promoter pair generate files before.csv and after.csv where you include all variables neccessary for 3DHiChAT before and after removing the enhancer, thus affecting most of the features (from #3 to #8).
+For calculating perturbation score for any enhancer-promoter pair generate files "before.csv" and "after.csv" where you include all variables neccessary for 3DHiChAT before and after removing the enhancer, thus affecting most of the features (from #3 to #8).
 
-Run 'Rscript perturbation_score.R' and the effect on gene expression is displayed (%) for that specific enhancer-promoter pair, which should generate the value of 29.2729.
+Run "Rscript perturbation_score.R" and the effect on gene expression is displayed (%) for that specific enhancer-promoter pair, which should generate the value of 29.2729.
+
 
 
 
