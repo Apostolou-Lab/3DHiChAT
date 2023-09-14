@@ -40,8 +40,8 @@ a<- read.csv('Train.txt', sep="\t", header=T)
 test_chr1$random<- predict(randomfor_chr1, test_chr1)
 spcor1<- cor(test_chr1$tpm,  test_chr1$random, method="spearman")
 spcor1 
-##0.4746914
-#Testing in a new datasets should include all 20 models for each chromosome and all values should be averaged.
+**##0.4746914
+**#Testing in a new datasets should include all 20 models for each chromosome and all values should be averaged.
 test_chr1$random<- predict(randomfor_chr1, test_chr1)
 ..
 ..
