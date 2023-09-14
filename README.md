@@ -29,7 +29,9 @@ Training dataset (Train.txt) contains 10 columns.
 
 R 4.0.4 (2021-02-15) and randomForest 4.6-14 were used to calculate spearman rank correlation for the training of Train.txt file.
 
-After running 3DHiChAT.R on the Train.txt test spearman correlation score for chr1: 
+Download all files in a folder and test the code for both estimating predicted gene expession (3DHiChAT.R) and calculating perturbation score after enhancer removal for a specific enhancer - promoter pair. 
+
+After running 3DHiChAT.R on the Train.txt using the following example, test spearman correlation score for chr1, which should generate value of 0.4746: 
 
 #################################################
 
@@ -59,9 +61,10 @@ test_chrX$random<- predict(randomfor_chrX, test_chrX)
 
 ######################################################################
 
-For calculating perturbation score for an enhancer-promoter pair generate files before.csv and after.csv where you include all variables neccessary for 3DHiChAT before and after removing the enhanccer thus affecting most of the features (from #3 to #8).
+For calculating perturbation score for any enhancer-promoter pair generate files before.csv and after.csv where you include all variables neccessary for 3DHiChAT before and after removing the enhancer, thus affecting most of the features (from #3 to #8).
 
-Run 'Rscript perturbation_score.R' and the effect on gene expression is displayed (%) for that specific enhancer-promoter pair.
+Run 'Rscript perturbation_score.R' and the effect on gene expression is displayed (%) for that specific enhancer-promoter pair, which should generate the value of 29.2729.
+
 
 
 
